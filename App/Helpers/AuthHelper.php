@@ -54,7 +54,7 @@ class AuthHelper {
 		$title = '401';
 		$isAuthenticated = AuthHelper::isAuthenticated();
 		$user = AuthHelper::getAuthenticatedUser();
-		if(!$isAuthenticated || !$user->isLevel($level)) {
+		if(!$isAuthenticated || !$user->hasPermission($level)) {
 			$data = compact(['user', 'title']);
 			View::render('layout/header', $data);
 			View::render('errors/401', $data);
