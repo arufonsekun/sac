@@ -22,9 +22,9 @@ $app->post('/login', 'App\Controllers\AuthController:login');
 $app->get('/logout', 'App\Controllers\AuthController:logout');
 $app->get('/admin/permissoes', 'App\Controllers\UserController:index');
 $app->post('/admin/permissoes/{id}', 'App\Controllers\UserController:update');
-$app->get('/admin/speakers', 'App\Controllers\SpeakerController:index');
-$app->get('/admin/speakers/create', 'App\Controllers\SpeakerController:create');
-$app->post('/admin/speakers/create', 'App\Controllers\SpeakerController:store');
+$app->get('/admin/palestrantes', 'App\Controllers\SpeakerController:index');
+$app->get('/admin/palestrantes/create', 'App\Controllers\SpeakerController:create');
+$app->post('/admin/palestrantes/create', 'App\Controllers\SpeakerController:store');
 
 $app->get('/admin/evento', 'App\Controllers\EventController:index');
 $app->get('/admin/evento/create', 'App\Controllers\EventController:create');
